@@ -15,7 +15,7 @@ This version of repository assembled and released due to usage in Whitaker et al
 
 _References pending_
 
-## References
+### References
 
 Bib entry for Rogers et al (2018):
 ```
@@ -45,7 +45,7 @@ Bib entry for Whitaker et al (2019):
 }
 ```
 
-## Old README
+### Old README
 
 To run all tasks, execute `run_tasks.sh`.
 
@@ -59,7 +59,7 @@ Data for NLI task can be found [here](https://nlp.stanford.edu/projects/snli/snl
 
 For sequence labeling tasks (POS, NER and chunking), please refer to [this repo](https://github.com/shashwath94/Sequence-Labeling)
 
-## Dependencies
+### Dependencies
 
 - Numpy
 - Keras
