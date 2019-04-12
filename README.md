@@ -1,7 +1,8 @@
 # Parallel Attraction-Repulsion based Word2Vec
 
 
-## similarity-relatedness
+## Intrinsic-Evaluation-tasks
+
 Similarity and relatedness experiments for word embeddings, implemented in Python.
 
 Pre-configured with 5 common datasets (citations provided below):
