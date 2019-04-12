@@ -1,1 +1,1 @@
-# PAR_Word2Vec
+# Parallel Attraction-Repulsion based Word2Vec
