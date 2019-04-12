@@ -1,6 +1,6 @@
 # PAR-Word2Vec
 
-This is the C++ and CUDA implementations of **P**arallel **A**trraction-**R**epulsion based **Word2Vec** described in the paper titled, "Parallel Data-Local Training for Optimizing Word2Vec Embeddings for Word and Graph Embeddings".
+The C++ and CUDA implementations of **P**arallel **A**trraction-**R**epulsion based **Word2Vec** described in the paper titled, "Parallel Data-Local Training for Optimizing Word2Vec Embeddings for Word and Graph Embeddings".
 
 ## Dependencies
 - Intel Compiler (The C++ code is optimized on Intel CPUs)
@@ -11,7 +11,7 @@ This is the C++ and CUDA implementations of **P**arallel **A**trraction-**R**epu
 - NumPy
 - Keras
 - _Keras backend; default Tensorflow_
-- A few other miscellaneous libraries packaged up in the `dependencies` directory for model accuracy evaluation
+- A few other miscellaneous libraries packaged up in the `dependencies` directory for model quality evaluation
   
 ## Quick Start
 1. Download the data: cd data; .\getText8.sh or .\getBillion.sh
