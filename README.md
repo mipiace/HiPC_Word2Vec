@@ -1,5 +1,26 @@
-# Parallel Attraction-Repulsion based Word2Vec
+# PAR-Word2Vec
 
+This is the C++ and CUDA implementations of **P**arallel **A**trraction-**R**epulsion based **Word2Vec** described in the paper titled, "Parallel Data-Local Training for Optimizing Word2Vec Embeddings for Word and Graph Embeddings".
+
+## Dependencies
+- Intel Compiler (The C++ code is optimized on Intel CPUs)
+- CUDA Compiler (The CUDA code is optimized on NVIDIA Tesla P100 PCIE GPU)
+- OpenMP (No separated installation is needed once Intel compiler is installed)
+- MKL (The latest version "16.0.0 or higher" is preferred as it has been improved significantly in recent years)
+- Python (tested on 3.6)
+- NumPy
+- Keras
+- _Keras backend; default Tensorflow_
+- A few other miscellaneous libraries packaged up in the `dependencies` directory for model accuracy evaluation
+  
+## Quick Start
+1. Download the data: cd data; .\getText8.sh or .\getBillion.sh
+2. Compile the codes: make
+3. The directory `SC19_AE_test_cases` contains BASH test scripts for validating the results in our SC19 submission.
+  + To run our CPU implementation, execute `run_par_word2vec_cpu.sh`. A pretrained word embedding text file will be generated for each dataset.
+  + To run our GPU implementation, execute `run_par_word2vec_gpu.sh`. A pretrained word embedding text file will be generated for each dataset.
+  + A pretrained word embedding text file is used for each individual evaluation task.
+  + Each test script validates one Figure or Table presented in the Experimental Evaluation section of the paper. The name of each test script corresponds to the Figure or Table number in the paper it validates.
 
 ## Intrinsic-Evaluation-tasks
 
@@ -14,16 +35,7 @@ Default scoring model provided uses cosine similarity of embedding vectors.
 
 A demo script `demo.sh` is provided, which will download a small set of word embeddings and run them through the experiments.
 
-### Dependencies
-
-- Python (tested on 3.6)
-- NumPy
-- A few other miscellaneous libraries packaged up in the `dependencies` directory:
-  + `pyemblib` for reading embedding files ([Github link](https://github.com/drgriffis/pyemblib))
-  + `configlogger` for logging experimental settings ([Github link](https://github.com/drgriffis/configlogger))
-  + custom logging code from ([here](https://github.com/drgriffis/miscutils))
-
-### Relevant citations
+### References
 
 ```
 Lev Finkelstein, Evgeniy Gabrilovich, Yossi Matias, Ehud Rivlin, Zach Solan, Gadi Wolfman, and Eytan Ruppin, "Placing Search in Context: The Concept Revisited", ACM Transactions on Information Systems, 20(1):116-131, January 2002
@@ -48,10 +60,6 @@ Fork of [shashwath94/Extrinsic-Evaluation-tasks](https://github.com/shashwath94/
 Original repository assembled for Rogers et al. (2018) "[What's in Your Embedding, And How It Predicts Task Performance](http://aclweb.org/anthology/C18-1228)".
 
 This version of repository assembled and released due to usage in Whitaker et al. (2019) "[Characterizing the impact of geometric properties of word embeddings on task performance](https://arxiv.org/abs/1904.04866)".
-
-### Specific details for each task
-
-_References pending_
 
 ### References
 
@@ -83,7 +91,7 @@ Bib entry for Whitaker et al (2019):
 }
 ```
 
-### Old README
+### README
 
 To run all tasks, execute `run_tasks.sh`.
 
@@ -96,10 +104,4 @@ For example, `acrobat 0.6056159735 -0.1367940009 -0.0936380029 0.8406270146 0.26
 Data for NLI task can be found [here](https://nlp.stanford.edu/projects/snli/snli_1.0.zip)
 
 For sequence labeling tasks (POS, NER and chunking), please refer to [this repo](https://github.com/shashwath94/Sequence-Labeling)
-
-### Dependencies
-
-- Numpy
-- Keras
-- _Keras backend; default Tensorflow_
 
