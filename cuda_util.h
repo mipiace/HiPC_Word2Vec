@@ -1,13 +1,3 @@
-/*
- * File:   cuda_util.h
- * Author: Mian
- *
- * Created on April 12, 2012, 9:07 AM
- */
-
-#ifndef MIAN_CUDA_UTIL_H
-#define	MIAN_CUDA_UTIL_H
-
 #include <cstdio>
 #include <cstdlib>
 #include <iostream>
@@ -138,7 +128,5 @@ namespace CUDAUtil {
     }
 
 
-} /*namespace CUDAUtil*/
-
-#endif	/* MIAN_CUDA_UTIL_H */
+}
 
