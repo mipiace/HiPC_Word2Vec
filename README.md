@@ -8,9 +8,7 @@ Similarity and relatedness experiments for word embeddings, implemented in Pytho
 Pre-configured with 5 common datasets (citations provided below):
 
 - [WordSim-353](http://www.cs.technion.ac.il/~gabr/resources/data/wordsim353/)
-- [WordSim-353 Similarity](http://alfonseca.org/eng/research/wordsim353.html) and [Relatedness](http://alfonseca.org/eng/research/wordsim353.html)
 - [SimLex-999](https://fh295.github.io/simlex.html)
-- [RareWords](https://nlp.stanford.edu/~lmthang/morphoNLM/)
 
 Default scoring model provided uses cosine similarity of embedding vectors.
 
