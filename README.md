@@ -2,6 +2,8 @@
 
 The C++ and CUDA implementations of **P**arallel **A**trraction-**R**epulsion based **Word2Vec** described in the paper titled, "Parallel Data-Local Training for Optimizing Word2Vec Embeddings for Word and Graph Embeddings".
 
+The data pre-processing and data loading parts of code are based on the pWord2Vec implementation from [Intel](https://github.com/IntelLabs/pWord2Vec).
+
 ## Dependencies
 - Intel Compiler (The C++ code is optimized on Intel CPUs)
 - CUDA Compiler (The CUDA code is optimized on NVIDIA Tesla P100 PCIE GPU)
@@ -15,12 +17,12 @@ The C++ and CUDA implementations of **P**arallel **A**trraction-**R**epulsion ba
   
 ## Quick Start
 1. Download the data: cd data; .\getText8.sh or .\getBillion.sh
-2. Compile the codes: make
-3. The directory `SC19_AE_test_cases` contains BASH test scripts for validating the results in our SC19 submission.
-  + To run our CPU implementation, execute `run_par_word2vec_cpu.sh`. A pretrained word embedding text file will be generated for each dataset.
-  + To run our GPU implementation, execute `run_par_word2vec_gpu.sh`. A pretrained word embedding text file will be generated for each dataset.
+2. Compile the codes for PAR-Word2Vec-cpu, PAR-Word2Vec-gpu, word2vec-cpu, pWord2Vec-cpu, pSGNScc-cpu and accSGNS-cpu: execute make
+3. Compile the codes only for wombat benchmark: In the directory `PAR_Word2Vec/wombat`, execute make
+3. The directory `SC19_AE_test_cases` contains BASH test scripts for validating all the results in our SC19 submission. Each test script validates one Figure or Table presented in the Experimental Evaluation section of the paper. The name of each test script corresponds to the Figure or Table number in the paper it validates.
+  + To validate the results in Table8, execute `Table8.sh`.
+  + To validate the results in Table5, execute `Table5.sh`.
   + A pretrained word embedding text file is used for each individual evaluation task.
-  + Each test script validates one Figure or Table presented in the Experimental Evaluation section of the paper. The name of each test script corresponds to the Figure or Table number in the paper it validates.
 
 ## Intrinsic-Evaluation-tasks
 
