@@ -16,9 +16,9 @@ The data pre-processing and data loading parts of code are based on the pWord2Ve
 - A few other miscellaneous libraries packaged up in the `dependencies` directory for model quality evaluation
   
 ## Quick Start
-1. Download the data: cd data; .\getText8.sh or .\getBillion.sh
+1. Download the data: cd `data`; .\getText8.sh or .\getBillion.sh
 2. Compile the codes for PAR-Word2Vec-cpu, PAR-Word2Vec-gpu, word2vec-cpu, pWord2Vec-cpu, pSGNScc-cpu and accSGNS-cpu: execute make
-3. Compile the codes only for wombat benchmark: In the directory `PAR_Word2Vec/wombat`, execute make
+3. Compile the codes only for wombat benchmark: cd `wombat`; execute make
 3. The directory `SC19_AE_test_cases` contains BASH test scripts for validating all the results in our SC19 submission. Each test script validates one Figure or Table presented in the Experimental Evaluation section of the paper. The name of each test script corresponds to the Figure or Table number in the paper it validates.
   + To validate the results in Table8, execute `Table8.sh`.
   + To validate the results in Table5, execute `Table5.sh`.
