@@ -16,13 +16,12 @@ The data pre-processing and data loading parts of code are based on the pWord2Ve
 - A few other miscellaneous libraries packaged up in the `dependencies` directory for model quality evaluation
   
 ## Prepare seven datasets
-1. Download datasets: ./data.sh
-  + The datasets which have less than 25MB are already included in `data` directory.
+1. Download seven datasets: `./data.sh`
 
 ## Compile the codes
-1. To compile all the codes, including our implementations and other implementions, execute: ./compile.sh
+1. Compile all the codes, including our implementations and other implementions: `./compile.sh`
 
 ## Validate the results in the Experimental Evaluation section of the paper
 1. The directory `SC19_AE_test_cases` contains BASH test scripts for validating all the results in our SC19 submission. A pretrained word embedding text file is used for each individual evaluation task. Each test script validates one Figure or Table presented in the Experimental Evaluation section of the paper. The name of each test script corresponds to the Figure or Table number in the paper it validates.
-  + To validate the results in Table8, execute `Table8.sh`.
-  + To validate the results in Table5, execute `Table5.sh`.
+  + Validate the results in Table8: `./Table8.sh`
+  + Validate the results in Table5: `./Table5.sh`
