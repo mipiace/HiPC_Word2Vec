@@ -16,14 +16,11 @@ The data pre-processing and data loading parts of code are based on the pWord2Ve
 - A few other miscellaneous libraries packaged up in the `dependencies` directory for model quality evaluation
   
 ## Prepare seven datasets
-1. Download the text8 and 1B-Word datasets: cd `data`; .\getText8.sh and .\getBillion.sh
-2. Download the BlogCatalog graph dataset: cd `data`; wget https://www.dropbox.com/s/5sdqv854ioody6i/blog_catalog_random_walks
-3. Download the ASTRO-Ph graph dataset: cd `data`; wget https://www.dropbox.com/s/efh8e6wyhu5n3so/ASTRO_PH_random_walks
-4. Other three graph datasets are already included in `data` directory.
+1. Download datasets: ./data.sh
+  + The datasets which have less than 25MB are already included in `data` directory.
 
 ## Compile the codes
-1. Compile the codes for PAR-Word2Vec-cpu, PAR-Word2Vec-gpu, word2vec-cpu, pWord2Vec-cpu, pSGNScc-cpu and accSGNS-cpu: execute make
-2. Compile the codes only for wombat benchmark: cd `wombat`; execute make
+1. To compile all the codes, including our implementations and other implementions, execute: ./compile.sh
 
 ## Validate the results in the Experimental Evaluation section of the paper
 1. The directory `SC19_AE_test_cases` contains BASH test scripts for validating all the results in our SC19 submission. A pretrained word embedding text file is used for each individual evaluation task. Each test script validates one Figure or Table presented in the Experimental Evaluation section of the paper. The name of each test script corresponds to the Figure or Table number in the paper it validates.
