@@ -11,6 +11,7 @@ The data pre-processing and data loading parts of code are based on the pWord2Ve
 - MKL (The latest version "16.0.0 or higher" is preferred as it has been improved significantly in recent years)
 - Python (tested on 3.6)
 - NumPy
+- scikit-learn
 - Keras
 - _Keras backend; default Tensorflow_
 - A few other miscellaneous libraries packaged up in the `dependencies` directory for model quality evaluation
@@ -25,3 +26,5 @@ The data pre-processing and data loading parts of code are based on the pWord2Ve
 1. The directory `SC19_AE_test_cases` contains BASH test scripts for validating all the results in our SC19 submission. A pretrained word embedding text file is used for each individual evaluation task. Each test script validates one Figure or Table presented in the Experimental Evaluation section of the paper. The name of each test script corresponds to the Figure or Table number in the paper it validates.
   + Validate the results in Table8: `./Table8.sh`
   + Validate the results in Table5: `./Table5.sh`
+  + Validate the results in Table7: `./Table7.sh`
+  + Validate the results in Table6: `./Table6.sh`
