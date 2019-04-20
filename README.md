@@ -10,9 +10,9 @@ The data pre-processing and data loading parts of code are based on the pWord2Ve
 - OpenMP (No separated installation is needed once Intel compiler is installed)
 - MKL (The latest version "16.0.0 or higher" is preferred as it has been improved significantly in recent years)
 - Python (tested on 3.6)
-- NumPy
+- NumPy (1.13.3)
 - scikit-learn
-- Keras
+- Keras (2.1.1)
 - _Keras backend; default Tensorflow_
 - A few other miscellaneous libraries packaged up in the `dependencies` directory for model quality evaluation
   
