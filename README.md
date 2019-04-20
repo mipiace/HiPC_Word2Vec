@@ -23,8 +23,8 @@ The data pre-processing and data loading parts of code are based on the pWord2Ve
 1. Compile all the codes, including our implementations and other implementions: `./compile.sh`
 
 ## Validate the results in the Experimental Evaluation section of the paper
-1. The directory `SC19_AE_test_cases` contains BASH test scripts for validating all the results in our SC19 submission. A pretrained word embedding text file is used for each individual evaluation task. Each test script validates one Figure or Table presented in the Experimental Evaluation section of the paper. The name of each test script corresponds to the Figure or Table number in the paper it validates.
-  + Validate the results in Table8: `./Table8.sh`
+1. The directory `SC19_AE_test_cases` contains BASH test scripts for validating all the results in our SC19 submission. A pretrained word embedding text file is used for each individual evaluation task. Each test script validates each Table presented in the Experimental Evaluation section of the paper. The name of each test script corresponds to the Table number in the paper it validates.
   + Validate the results in Table5: `./Table5.sh`
-  + Validate the results in Table7: `./Table7.sh`
   + Validate the results in Table6: `./Table6.sh`
+  + Validate the results in Table7: `./Table7.sh`
+  + Validate the results in Table8: `./Table8.sh`
