@@ -45,7 +45,7 @@ awk '{print "\tPAR-Word2Vec-gpu:\t" $2/10}' PAR_Word2Vec_gpu_time
 
 
 data=../data/1b
-niters=5
+niters=10
 
 binary=../word2vec_cpu
 numactl --interleave=all $binary -train $data -output vectors.txt -size 128 -window 8 -negative 5 -sample 1e-4 -threads $ncores -binary 0 -iter $niters -min-count 5 -save-vocab vocab.txt -cbow 0
@@ -76,13 +76,13 @@ binary=../PAR_Word2Vec_gpu_text
 numactl --interleave=all $binary -train $data -output vectors.txt -size 128 -window 8 -negative 5 -sample 1e-4 -binary 0 -iter $niters -min-count 5 -save-vocab vocab.txt -batch-size 24 -gamma 1024 -max-num-sen 30700000
 
 echo "1B-Word dataset: training time per epoch"
-awk '{print "\tWord2Vec-cpu:\t\t" $2/5}' word2vec_cpu_time
-awk '{print "\tpWord2Vec-cpu:\t\t" $2/5}' pWord2Vec_cpu_time
-awk '{print "\twombatSGNS-cpu:\t\t" $2/5}' wombatSGNS_cpu_time
-awk '{print "\tpSGNScc-cpu:\t\t" $2/5}' pSGNScc_cpu_time
-awk '{print "\tPAR-Word2Vec-cpu:\t" $2/5}' PAR_Word2Vec_cpu_time
-awk '{print "\taccSGNS-gpu:\t\t" $2/5}' accSGNS_gpu_time
-awk '{print "\tPAR-Word2Vec-gpu:\t" $2/5}' PAR_Word2Vec_gpu_time
+awk '{print "\tWord2Vec-cpu:\t\t" $2/10}' word2vec_cpu_time
+awk '{print "\tpWord2Vec-cpu:\t\t" $2/10}' pWord2Vec_cpu_time
+awk '{print "\twombatSGNS-cpu:\t\t" $2/10}' wombatSGNS_cpu_time
+awk '{print "\tpSGNScc-cpu:\t\t" $2/10}' pSGNScc_cpu_time
+awk '{print "\tPAR-Word2Vec-cpu:\t" $2/10}' PAR_Word2Vec_cpu_time
+awk '{print "\taccSGNS-gpu:\t\t" $2/10}' accSGNS_gpu_time
+awk '{print "\tPAR-Word2Vec-gpu:\t" $2/10}' PAR_Word2Vec_gpu_time
 
 
 data=../data/blog_catalog_random_walks
